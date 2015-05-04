@@ -129,6 +129,37 @@ And that's it! Call the function and see the results for yourself.
 Pair up with a partner, and follow this pattern to render the array of houses on `/houses.html`. The html page and most of the javascript have already been written for you. All you need to do is follow the above pattern on `houses.html` and houses.js`.
 
 
+## Part 2: Bootstrap
+
+We now have content our page, but we have no way to navigate between pages, and our mockup is ugly. Luckily, there's a front end framework that allows us to make our page functional, pretty and responsive quickly.
+
+Bootstrap is an open-source collection of HTML and CSS design templates. It allows us
+
+Sample bootstrap header
+```html
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Grand Theft Thrones</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/characters.html">Characters</a></li>
+            <li><a href="/houses.html">Houses</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+```
+
 ## Additional Resources
 
 List additional related resources such as videos, blog posts and official documentation.
