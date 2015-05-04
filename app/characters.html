@@ -32,18 +32,33 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="/characters.html">Characters</a></li>
+            <li class="active"><a href="/characters.html">Characters<span class="sr-only">(current)</span></a></li>
             <li><a href="/houses.html">Houses</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container">
-      <div class="row">
-          <div class="hero-unit">
-            <img class="hero img-rounded" src="http://i.imgur.com/xlzE2SJ.png"/>
-          </div>
-    </div>
+      <div class="container">
+        <h1>Characters</h1>
+        <div class="row">
+          <div id="content"></div>
+        </div>
+      </div>
+
+
+
+
+     <script id="character-index" type="text/x-handlebars-template">
+      {{#each characters}}
+        <div class="col-md-6">
+          <img class="img-circle portrait" src={{url}}/>
+          <h2>{{name}}</h2>
+          <h4>{{title}}</h4>
+          <small><em>Quote: {{quote}}</em></small>
+        </div>
+      {{/each}}
+     </script>
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -54,7 +69,7 @@
     <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/characters.js"></script>
         <!-- endbuild -->
 </body>
 </html>
