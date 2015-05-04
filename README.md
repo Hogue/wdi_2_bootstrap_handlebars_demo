@@ -33,7 +33,7 @@ Rendering objects with handlebars templates is a four step process:
 
 1. Create a template in a script tag on your html page
 2. Create a templating function
-3. Call the templating function with the object as our paramater
+3. Call the templating function with the object as our parameter
 4. Set our div's html to the result of calling our templating function
 
 ### 1. Creating the template
@@ -126,7 +126,7 @@ And that's it! Call the function and see the results for yourself.
 
 ## Lab(Pair)
 
-Pair up with a partner, and follow this pattern to render the array of houses on `/houses.html`. The html page and most of the javascript have already been written for you. All you need to do is follow the above pattern on `houses.html` and houses.js`.
+Pair up with a partner, and follow this pattern to render the array of houses on `/houses.html`. The html page and most of the javascript have already been written for you. All you need to do is follow the above pattern on `houses.html` and `houses.js`.
 
 
 ## Part 2: Bootstrap
