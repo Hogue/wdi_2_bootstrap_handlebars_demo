@@ -14,14 +14,14 @@ var houses = (function(){
   }
 
   return {
-    getHouses: getHouses
+    indexHouses: getHouses
   }
 
 })();
 
 
 $(document).ready(function(){
-  houses.getHouses();
+  houses.indexHouses();
 })
 
 

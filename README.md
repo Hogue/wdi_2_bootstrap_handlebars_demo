@@ -11,6 +11,10 @@ By the end of this, students should be able to:
 - Create a visually appealing header using bootstrap styles
 - Consult the bootstrap documenation for additional styling
 
+## Foreward
+
+These frameworks are not the end-all be-all.
+
 # Part 1: Handlebars
 
 ## Instructions
@@ -136,7 +140,69 @@ Bootstrap is an open-source collection of HTML and CSS design templates. You alr
 
 ### The Grid System
 
+Boostrap uses a 12 column grid. What does this mean? Let's find out!
 
+First, copy and paste this code into your stylesheet:
+
+```css
+.container {
+  border: 10px solid red;
+}
+
+.row {
+  border: 10px solid green;
+}
+
+.col-md-4 {
+  border: 10px solid blue;
+}
+```
+
+We're going to use these stylings to keep track of where our divs are.
+
+Next, let's go ahead and apply the basic bootstrap grid classes to our index.html. With bootstrap, you will wrap your whole grid in a:
+
+```html
+<div class="container"></div>
+```
+
+each row in a:
+
+```html
+<div class="row"></div>
+```
+
+and each seperate piece of content in a varaiation of:
+
+```html
+<div class="col-md-4"></div>
+```
+
+All put together, a sample grid looks as follows:
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">How now brown cow</div>
+    <div class="col-md-4">How now brown cow</div>
+    <div class="col-md-4">How now brown cow</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">How now brown cow</div>
+    <div class="col-md-4">How now brown cow</div>
+    <div class="col-md-4">How now brown cow</div>
+  </div>
+</div>
+```
+
+Go to `index.html`, comment out the existing code and paste in the above block. We'll check it out together.
+
+
+
+
+### Components
+
+Boostrap provides a number of cut-and-paste solutions for problems that you might run into
 
 Sample bootstrap header
 ```html
@@ -162,6 +228,11 @@ Sample bootstrap header
       </div><!-- /.container-fluid -->
     </nav>
 ```
+
+
+### Documentation
+
+
 
 ## Additional Resources
 

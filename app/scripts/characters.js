@@ -14,13 +14,13 @@ var characters = (function(){
   }
 
   return {
-    getCharacters: getCharacters
+    indexCharacters: getCharacters
   }
 
 })();
 
 $(document).ready(function(){
-  characters.getCharacters();
+  characters.indexCharacters();
 })
 
 
