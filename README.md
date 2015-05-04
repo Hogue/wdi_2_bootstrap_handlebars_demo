@@ -29,13 +29,14 @@ By now, we know how to render static html. What happens when we want to render d
 
 Handlebars is a javascript templating library.
 
-Rendering objects with handlebars templates is a three step process:
+Rendering objects with handlebars templates is a four step process:
 
 1. Create a template in a script tag on your html page
 2. Create a templating function
-3. Pass the object(s) that you want to render into the templating function
+3. Call the templating function with the object as our paramater
+4. Set our div's html to the result of calling our templating function
 
-## 1. Creating the template
+### 1. Creating the template
 
 Our client wants us to create a Game of Thrones fansite. Please run `grunt serve`, navigate to `localhost:9000/characters.html` and open up your console. What do you see?
 
@@ -47,9 +48,9 @@ Our objects look like:
 var daenarys = {
   id: 1,
   name: "Daenerys Targaryen",
-  title: "Stormborn of the House Targaryen, the First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains and Mother of Dragons,
+  title: "Stormborn of the House Targaryen, the First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains and Mother of Dragons",
   quote: "I will take what is mine with blood and fire.",
-  "url: "http://i.imgur.com/DjHJq4E.jpg"
+  url: "http://i.imgur.com/DjHJq4E.jpg"
 };
 ```
 
@@ -85,9 +86,9 @@ Next, we create tags for each object property:
 </script>
 ```
 
-## 2. Create a templating function
+### 2. Create a templating function
 
-Now that we have a template made up, we need to pass data into it! Navigate over to `scripts/characters.js'. You should see a characters module. Ignore the top function for now. We'll get to that at a later lesson. For now, we will concern ourselves with the `_renderCharacters` function.
+Now that we have a template made up, we need to pass data into it! Navigate over to `scripts/characters.js`. You should see a characters module. Ignore the top function for now. We'll get to that at a later lesson. For now, we will concern ourselves with the `_renderCharacters` function.
 
 First, we need to compile our html template. This sounds complicated, but Handlebars makes it easy! We type:
 
@@ -97,13 +98,35 @@ var template = Handlebars.compile($('#character-index').html());
 
 We are targeting the template with jQuery, extracting the html with `.html`, then feeding the result into Handlebars's compiling function. Finally, we point to the resulting function with the variable `template`.
 
+### 3. Call the templating function with the object as our paramater
+
+Now that we've created our templating function, lets see what it can do!
+
+Enter this under your last line of code and check the log in your console:
+
+```javascript
+  console.log((template({
+    characters: characters
+  })));
+```
+
+We have a string that contains all of the html we want to render. Almost there!
+
+### 4. Set our div's html to the result of calling our templating function
+
+We already know how to do this part. We target our `content` div, then set it's html content with `.html()`:
+
+```javascript
+$('#content').html(template({
+  characters: characters
+}));
+```
+And that's it! Call the function and see the results for yourself.
 
 
+## Lab(Pair)
 
-
-
-
-
+Pair up with a partner, and follow this pattern to render the array of houses on `/houses.html`. The html page and most of the javascript have already been written for you. All you need to do is follow the above pattern on `houses.html` and houses.js`.
 
 
 ## Additional Resources

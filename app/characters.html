@@ -37,26 +37,23 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-      <div class="container">
-        <h1>Characters</h1>
-        <div class="row">
-          <div id="content"></div>
-        </div>
+    <div class="container">
+      <h1>Characters</h1>
+      <div class="row">
+        <div id="content"></div>
       </div>
+    </div>
+
+
+    <!--- your template goes here -->
 
 
 
 
-     <script id="character-index" type="text/x-handlebars-template">
-      {{#each characters}}
-        <div class="col-md-6">
-          <img class="img-circle portrait" src={{url}}/>
-          <h2>{{name}}</h2>
-          <h4>{{title}}</h4>
-          <p><em>Quote: {{quote}}</em></p>
-        </div>
-      {{/each}}
-     </script>
+
+
+    <!--- your template ends here -->
+
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -67,8 +64,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/characters.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/characters.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>

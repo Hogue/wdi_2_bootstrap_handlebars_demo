@@ -7,11 +7,9 @@ var houses = (function(){
   }
 
   var _renderHouses = function(houses){
+    console.log(houses);
     // your code starts here
-    var template = Handlebars.compile($('#house-index').html());
-    $('#content').html(template({
-          houses: houses
-    }));
+
     // your code ends here
   }
 

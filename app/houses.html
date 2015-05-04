@@ -37,26 +37,22 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-      <div class="container">
-        <h1>Houses</h1>
-        <div class="row">
-          <div id="content"></div>
-          <canvas id='canv'></canvas>
-        </div>
+    <div class="container">
+      <h1>Houses</h1>
+      <div class="row">
+        <div id="content"></div>
+        <canvas id='canv'></canvas>
       </div>
+    </div>
 
 
 
 
-     <script id="house-index" type="text/x-handlebars-template">
-      {{#each houses}}
-        <div class="col-md-6">
-          <img class="img-circle" src={{sigil}}/>
-          <h2>{{name}}</h2>
-          <h4>{{words}}</h4>
-        </div>
-      {{/each}}
-     </script>
+    <!--- your template goes here -->
+
+
+
+    <!--- your template ends here -->
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -67,8 +63,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/houses.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/houses.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>
