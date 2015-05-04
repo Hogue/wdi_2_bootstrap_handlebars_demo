@@ -199,11 +199,11 @@ Go to `index.html`, comment out the existing code and paste in the above block. 
 
 So we have this weird three-part class for our columns. What do these mean? Let's take a few minutes to look over the documentation on the subject:
 
-[Go hear and scroll down for grid column knowledge](http://getbootstrap.com/css/)
+[Go here and scroll down for grid column knowledge](http://getbootstrap.com/css/)
 
 #### Application
 
-Time to start de-suck-afying our app! Let's start with the houses page.
+Time to start improving our app! Let's start with the houses page.
 
 First, we need to add container and row div wrappers to the elements on our index:
 
@@ -234,7 +234,7 @@ Now it's beautiful(ish)!
 
 ### Lab
 
-Use the same pattern to make the characters page look less like garbage! Try experimenting with your own grid configurations.
+Use the same pattern to make the characters page look better! Try experimenting with your own grid configurations.
 
 ### Components
 
@@ -265,7 +265,7 @@ I have (ever so slightly) modified the [navbar template](http://getbootstrap.com
     </nav>
 ```
 
-Go ahead and copy and paste this above the container in each of our html pages. Bingo! Bootstrap components are that easy! I was kidding when I said these were copy and past solutions.
+Go ahead and copy and paste this above the container in each of our html pages. Bingo! Bootstrap components are that easy! I was not kidding when I said these were copy and past solutions.
 
 
 ### Free Play
@@ -277,8 +277,6 @@ As you've probably found out by now, using Bootstrap boils down to reading throu
   - [Media Objects](http://getbootstrap.com/components/#media)
 
 ## Additional Resources
-
-List additional related resources such as videos, blog posts and official documentation.
 
 - [Handlebars documentation](http://handlebarsjs.com/reference.html)
 - [Bootstrap Documentation](http://getbootstrap.com)
