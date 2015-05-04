@@ -43,41 +43,47 @@ By some magic hocus-pocus that we will discuss later, we have an array of charac
 
 Our objects look like:
 
-```var daenarys = {
-    id: 1,
-    name: "Daenerys Targaryen",
-    title: "Stormborn of the House Targaryen, the First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains and Mother of Dragons,
-    quote: "I will take what is mine with blood and fire.",
-    "url: "http://i.imgur.com/DjHJq4E.jpg"
-  };```
+```javascript
+var daenarys = {
+  id: 1,
+  name: "Daenerys Targaryen",
+  title: "Stormborn of the House Targaryen, the First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains and Mother of Dragons,
+  quote: "I will take what is mine with blood and fire.",
+  "url: "http://i.imgur.com/DjHJq4E.jpg"
+};
+```
 
 Our template will mirror this structure.
 
 First, we create a script tag in our html file.
 
-```<script id="character-index" type="text/x-handlebars-template">
-   </script>```
+```html
+<script id="character-index" type="text/x-handlebars-template"></script>
+```
 
 Now we can begin our template! True to handlebars's name, the library uses `{{}}` as wrappers.
 
 First, we iterate through our array of objects:
 
-```<script id="character-index" type="text/x-handlebars-template">
-      {{#each characters}}
-      {{/each}}
-     </script>```
+```html
+<script id="character-index" type="text/x-handlebars-template">
+  {{#each characters}}
+  {{/each}}
+</script>
+```
 
 Next, we create tags for each object property:
 
-```<script id="character-index" type="text/x-handlebars-template">
-      {{#each characters}}
-          <img src={{url}}/>
-          <h2>{{name}}</h2>
-          <h4>{{title}}</h4>
-          <p><em>Quote: {{quote}}</em></p>
-        </div>
-      {{/each}}
-    </script>```
+```html
+<script id="character-index" type="text/x-handlebars-template">
+  {{#each characters}}
+    <img src={{url}}/>
+    <h2>{{name}}</h2>
+    <h4>{{title}}</h4>
+    <p><em>Quote: {{quote}}</em></p>
+  {{/each}}
+</script>
+```
 
 ## 2. Create a templating function
 
@@ -85,7 +91,9 @@ Now that we have a template made up, we need to pass data into it! Navigate over
 
 First, we need to compile our html template. This sounds complicated, but Handlebars makes it easy! We type:
 
-```var template = Handlebars.compile($('#character-index').html());```
+```javascript
+var template = Handlebars.compile($('#character-index').html());
+```
 
 We are targeting the template with jQuery, extracting the html with `.html`, then feeding the result into Handlebars's compiling function. Finally, we point to the resulting function with the variable `template`.
 
@@ -102,5 +110,5 @@ We are targeting the template with jQuery, extracting the html with `.html`, the
 
 List additional related resources such as videos, blog posts and official documentation.
 
-- Handlebars documentation: http://handlebarsjs.com/reference.html
-- Bootstrap Documentation: http://getbootstrap.com/
+- [Handlebars documentation](http://handlebarsjs.com/reference.html)
+- [Bootstrap Documentation](http://getbootstrap.com)
