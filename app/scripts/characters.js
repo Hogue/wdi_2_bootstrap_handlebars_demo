@@ -7,6 +7,7 @@ var characters = (function(){
   }
 
   var _renderCharacters = function(characters){
+    console.log(characters);
     // your code starts here
     var template = Handlebars.compile($('#character-index').html());
     $('#content').html(template({

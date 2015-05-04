@@ -12,6 +12,8 @@ By the end of this, students should be able to:
 - Create a visually appealing header using bootstrap styles
 - Consult the bootstrap documenation for additional styling
 
+# Part 1: Handlebars
+
 ## Instructions
 
 1. Fork and clone
@@ -30,14 +32,69 @@ Handlebars is a javascript templating library.
 Rendering objects with handlebars templates is a three step process:
 
 1. Create a template in a script tag on your html page
-2. Compile the template to create a templating function
+2. Create a templating function
 3. Pass the object(s) that you want to render into the templating function
 
 ## 1. Creating the template
 
-Our client wants us to create a Game of Thrones fansite.
+Our client wants us to create a Game of Thrones fansite. Please run `grunt serve`, navigate to `localhost:9000/characters.html` and open up your console. What do you see?
 
-Please run `grunt serve` and navigate to localhost:9000
+By some magic hocus-pocus that we will discuss later, we have an array of character objects.
+
+Our objects look like:
+
+```var daenarys = {
+    id: 1,
+    name: "Daenerys Targaryen",
+    title: "Stormborn of the House Targaryen, the First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains and Mother of Dragons,
+    quote: "I will take what is mine with blood and fire.",
+    "url: "http://i.imgur.com/DjHJq4E.jpg"
+  };```
+
+Our template will mirror this structure.
+
+First, we create a script tag in our html file.
+
+```<script id="character-index" type="text/x-handlebars-template">
+   </script>```
+
+Now we can begin our template! True to handlebars's name, the library uses `{{}}` as wrappers.
+
+First, we iterate through our array of objects:
+
+```<script id="character-index" type="text/x-handlebars-template">
+      {{#each characters}}
+      {{/each}}
+     </script>```
+
+Next, we create tags for each object property:
+
+```<script id="character-index" type="text/x-handlebars-template">
+      {{#each characters}}
+          <img src={{url}}/>
+          <h2>{{name}}</h2>
+          <h4>{{title}}</h4>
+          <p><em>Quote: {{quote}}</em></p>
+        </div>
+      {{/each}}
+    </script>```
+
+## 2. Create a templating function
+
+Now that we have a template made up, we need to pass data into it! Navigate over to `scripts/characters.js'. You should see a characters module. Ignore the top function for now. We'll get to that at a later lesson. For now, we will concern ourselves with the `_renderCharacters` function.
+
+First, we need to compile our html template. This sounds complicated, but Handlebars makes it easy! We type:
+
+```var template = Handlebars.compile($('#character-index').html());```
+
+We are targeting the template with jQuery, extracting the html with `.html`, then feeding the result into Handlebars's compiling function. Finally, we point to the resulting function with the variable `template`.
+
+
+
+
+
+
+
 
 
 
@@ -45,6 +102,5 @@ Please run `grunt serve` and navigate to localhost:9000
 
 List additional related resources such as videos, blog posts and official documentation.
 
-- Item 1
-- Item 2
-- Item 3
+- Handlebars documentation: http://handlebarsjs.com/reference.html
+- Bootstrap Documentation: http://getbootstrap.com/
