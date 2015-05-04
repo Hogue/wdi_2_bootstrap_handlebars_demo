@@ -127,7 +127,7 @@ $('#content').html(template({
 And that's it! Call the function and see the results for yourself.
 
 
-## Lab(Pair)
+### Lab(Pair)
 
 Pair up with a partner, and follow this pattern to render the array of houses on `/houses.html`. The html page and most of the javascript have already been written for you. All you need to do is follow the above pattern on `houses.html` and `houses.js`.
 
