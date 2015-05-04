@@ -6,8 +6,7 @@
 
 By the end of this, students should be able to:
 
-- Install new javascript libraries using bower
-- Render javascript objects dyanmically using handlebars
+- Render javascript objects in html using handlebars
 - Use the Bootstrap grid system to make a responsive page
 - Create a visually appealing header using bootstrap styles
 - Consult the bootstrap documenation for additional styling
@@ -133,7 +132,11 @@ Pair up with a partner, and follow this pattern to render the array of houses on
 
 We now have content our page, but we have no way to navigate between pages, and our mockup is ugly. Luckily, there's a front end framework that allows us to make our page functional, pretty and responsive quickly.
 
-Bootstrap is an open-source collection of HTML and CSS design templates. It allows us
+Bootstrap is an open-source collection of HTML and CSS design templates. You already installed bootstrap with bower, so we will move right along with implementation.
+
+### The Grid System
+
+
 
 Sample bootstrap header
 ```html
