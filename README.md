@@ -51,7 +51,7 @@ Our objects look like:
 var daenarys = {
   id: 1,
   name: "Daenerys Targaryen",
-  title: "Stormborn of the House Targaryen, the First of Her Name, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains and Mother of Dragons",
+  title: "Queen of Meereen and Mother of Dragons",
   quote: "I will take what is mine with blood and fire.",
   url: "http://i.imgur.com/DjHJq4E.jpg"
 };
@@ -197,14 +197,50 @@ All put together, a sample grid looks as follows:
 
 Go to `index.html`, comment out the existing code and paste in the above block. We'll check it out together.
 
+So we have this weird three-part class for our columns. What do these mean? Let's take a few minutes to look over the documentation on the subject:
 
+[Go hear and scroll down for grid column knowledge](http://getbootstrap.com/css/)
 
+#### Application
+
+Time to start de-suck-afying our app! Let's start with the houses page.
+
+First, we need to add container and row div wrappers to the elements on our index:
+
+```html
+<div class="container">
+  <h1>Houses</h1>
+  <div class="row">
+      <div id="content"></div>
+  </div>
+</div>
+```
+
+Our page is looking a bit better, but having all of our houses in one vertical line is far from ideal. To get these guys looking pretty, we need to add another div inside of template:
+
+```html
+<script id="house-index" type="text/x-handlebars-template">
+  {{#each houses}}
+  <div class="col-md-4">
+      <img src={{sigil}}/>
+      <h2>{{name}}</h2>
+      <h4>{{words}}</h4>
+  </div>
+  {{/each}}
+</script>
+```
+
+Now it's beautiful(ish)!
+
+### Lab
+
+Use the same pattern to make the characters page look less like garbage! Try experimenting with your own grid configurations.
 
 ### Components
 
-Boostrap provides a number of cut-and-paste solutions for problems that you might run into
+Boostrap provides a number of copy-and-paste solutions for problems that you might run into. Right now, we seem to have a navigation issue. We have all these beautiful pages, but no way to visit them.
+I have (ever so slightly) modified the [navbar template](http://getbootstrap.com/components/#navbar) found in the bootstrap documentation:
 
-Sample bootstrap header
 ```html
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -229,10 +265,16 @@ Sample bootstrap header
     </nav>
 ```
 
+Go ahead and copy and paste this above the container in each of our html pages. Bingo! Bootstrap components are that easy! I was kidding when I said these were copy and past solutions.
 
-### Documentation
 
+### Free Play
 
+As you've probably found out by now, using Bootstrap boils down to reading through their documentation, finding the classes that you need and pasting them into your html markup. With this in mind, take 20 minutes to customize your website! Just scroll through the page, find components that you like and add them to your page. A few suggestions:
+
+  - [Image Shapes](http://getbootstrap.com/css/#images-shapes)
+  - [Page Headers](http://getbootstrap.com/components/#page-header)
+  - [Media Objects](http://getbootstrap.com/components/#media)
 
 ## Additional Resources
 

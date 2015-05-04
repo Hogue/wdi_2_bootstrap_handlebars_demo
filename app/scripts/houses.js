@@ -7,8 +7,8 @@ var houses = (function(){
   }
 
   var _renderHouses = function(houses){
-    console.log(houses);
     // your code starts here
+
 
     // your code ends here
   }

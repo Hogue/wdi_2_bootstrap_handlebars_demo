@@ -40,9 +40,6 @@ a {
   font-size: 2em;
 }
 
-.hero {
-  width: 100%;
-}
 
 .navbar {
   border-bottom: .75em solid black;
@@ -67,3 +64,4 @@ a {
 .col-md-4 {
   border: 10px solid blue;
 }
+
