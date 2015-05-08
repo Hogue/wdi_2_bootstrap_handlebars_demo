@@ -11,10 +11,6 @@ By the end of this, students should be able to:
 - Create a visually appealing header using bootstrap styles
 - Consult the bootstrap documenation for additional styling
 
-## Foreward
-
-These frameworks are not the end-all be-all.
-
 # Part 1: Handlebars
 
 ## Instructions
